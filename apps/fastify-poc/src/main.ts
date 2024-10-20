@@ -1,4 +1,5 @@
 import Fastify from 'fastify';
+import routes from '@fastify/routes';
 import { app } from './app/app';
 
 const host = process.env.HOST ?? 'localhost';
@@ -9,6 +10,12 @@ const server = Fastify({
   logger: true,
 });
 
+server.get('/well-known/health-check', async () => {
+  return { status: 'ok' };
+});
+
+// Resister your routes.
+server.register(routes);
 // Register your application as a normal plugin.
 server.register(app);
 
