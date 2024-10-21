@@ -1,0 +1,19 @@
+{
+  "name": "design-patterns",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/design-patterns/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/design-patterns",
+        "main": "libs/design-patterns/src/index.ts",
+        "tsConfig": "libs/design-patterns/tsconfig.lib.json",
+        "assets": ["libs/design-patterns/*.md"]
+      }
+    }
+  }
+}
