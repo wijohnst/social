@@ -21,9 +21,6 @@ Shape <|-- Square
 Shape <|-- Circle
 Shape <|-- Triangle
 
-
-
-
 class Square{
     -int side
     +accept(v: Visitor)
