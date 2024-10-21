@@ -14,6 +14,13 @@
         "tsConfig": "libs/design-patterns/tsconfig.lib.json",
         "assets": ["libs/design-patterns/*.md"]
       }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "libs/design-patterns/jest.config.ts",
+        "passWithNoTests": true
+      }
     }
   }
 }
